@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Saanvita Technologies</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        .project-card { transition: all 0.4s ease; }
+        .project-card:hover { transform: scale(1.05); }
+        .filter-btn.active { background-color: #ff3b5c; color: white; }
+    </style>
+</head>
+<body class="font-sans bg-zinc-50">
+
+    <!-- Navbar -->
+    <!-- NAVBAR -->
+    <nav class="bg-white border-b sticky top-0 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-12 h-12 bg-gradient-to-br from-red-500 to-yellow-400 rounded-2xl flex items-center justify-center text-white text-3xl font-bold">S</div>
+                <div>
+                    <span class="text-2xl font-bold tracking-tight text-red-600">SAANVITHA</span>
+                    <span class="text-2xl font-bold tracking-tight text-blue-600">TECHNOLOGIES</span>
+                </div>
+            </div>
+            
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="index.html" class="nav-link text-zinc-700 hover:text-red-600">Home</a>
+                <a href="services.html" class="nav-link text-zinc-700 hover:text-red-600">Services</a>
+                <a href="training.html" class="nav-link text-zinc-700 hover:text-red-600">Training</a>
+                <a href="portfolio.html" class="nav-link text-zinc-700 hover:text-red-600">Portfolio</a>
+                <a href="contact.html" class="nav-link text-zinc-700 hover:text-red-600">Contact</a>
+            </div>
+            
+            <div class="flex items-center gap-4">
+                <a href="tel:+918801488014" class="hidden sm:flex items-center gap-2 bg-zinc-900 text-white px-5 py-3 rounded-2xl text-sm font-semibold hover:bg-zinc-800">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>+91 88014 88014</span>
+                </a>
+                <button onclick="window.location.href='contact.html'" 
+                        class="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-2xl font-semibold transition-all">
+                    Get Quote
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="bg-gradient-to-br from-zinc-900 to-black text-white py-24 text-center">
+        <h1 class="text-6xl font-bold mb-6">Our Portfolio</h1>
+        <p class="text-xl max-w-2xl mx-auto">Real results delivered for businesses in Vijayawada and across Andhra Pradesh</p>
+    </header>
+
+    <!-- Filters -->
+    <div class="max-w-7xl mx-auto px-6 py-10">
+        <div class="flex flex-wrap gap-4 justify-center">
+            <button onclick="filterCategory('all')" class="filter-btn active px-6 py-3 rounded-2xl border font-medium">All Projects</button>
+            <button onclick="filterCategory('website')" class="filter-btn px-6 py-3 rounded-2xl border font-medium">Websites</button>
+            <button onclick="filterCategory('marketing')" class="filter-btn px-6 py-3 rounded-2xl border font-medium">Digital Marketing</button>
+            <button onclick="filterCategory('design')" class="filter-btn px-6 py-3 rounded-2xl border font-medium">Graphic Design</button>
+        </div>
+    </div>
+
+    <!-- Portfolio Grid -->
+    <section class="max-w-7xl mx-auto px-6 pb-24">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="portfolio-grid">
+            <!-- Projects will be filtered via JS -->
+            <div class="project-card bg-white rounded-3xl overflow-hidden shadow-xl" data-category="website">
+                <img src="https://picsum.photos/id/1015/600/400" class="w-full h-64 object-cover" alt="Project">
+                <div class="p-6">
+                    <h3 class="font-bold text-xl">Dr. Suraksha Pharmacy - Ecommerce Website</h3>
+                    <p class="text-zinc-600 text-sm mt-2">Modern medical store website with online booking</p>
+                </div>
+            </div>
+
+            <div class="project-card bg-white rounded-3xl overflow-hidden shadow-xl" data-category="marketing">
+                <img src="https://picsum.photos/id/201/600/400" class="w-full h-64 object-cover" alt="Project">
+                <div class="p-6">
+                    <h3 class="font-bold text-xl">Vijayawada Dental Clinic - Google Ads Campaign</h3>
+                    <p class="text-zinc-600 text-sm mt-2">340% increase in appointment bookings</p>
+                </div>
+            </div>
+
+            <div class="project-card bg-white rounded-3xl overflow-hidden shadow-xl" data-category="design">
+                <img src="https://picsum.photos/id/237/600/400" class="w-full h-64 object-cover" alt="Project">
+                <div class="p-6">
+                    <h3 class="font-bold text-xl">Brand Identity & Flex Banners - Royal Function Hall</h3>
+                    <p class="text-zinc-600 text-sm mt-2">Complete branding & print materials</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-zinc-900 text-zinc-300">
+        <div class="max-w-7xl mx-auto px-6 pt-20 pb-12">
+            <div class="grid md:grid-cols-4 gap-10">
+                <div>
+                    <div class="flex items-center gap-3 text-white mb-6">
+                        <div class="w-10 h-10 bg-gradient-to-br from-red-500 to-yellow-400 rounded-2xl flex items-center justify-center text-3xl font-bold">S</div>
+                        <div class="font-bold text-xl">Saanvitha Technologies</div>
+                    </div>
+                    <p class="text-sm">Your complete digital growth partner in Vijayawada.</p>
+                    
+                    <div class="mt-8">
+                        <a href="https://wa.me/918801488014" target="_blank" 
+                           class="inline-flex items-center gap-3 bg-green-600 text-white px-6 py-3 rounded-2xl hover:bg-green-700">
+                            <i class="fa-brands fa-whatsapp text-2xl"></i>
+                            <span class="font-medium">Chat on WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-semibold mb-6">Services</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#" class="hover:text-white transition-colors">Digital Marketing</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">SEO & Google Ads</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Website Development</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Graphic Designing</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-semibold mb-6">Training</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#" class="hover:text-white transition-colors">SEO Training</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Digital Marketing Course</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Website Design</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-semibold mb-6">Contact</h4>
+                    <div class="space-y-4 text-sm">
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-location-dot mt-1"></i>
+                            <div>D No: 39-10-21, 3rd Floor,<br>Above Suraksha Pharmacy,<br>Veterinary Hospital Road, Labbipet,<br>Vijayawada - 520010, AP</div>
+                        </div>
+                        <a href="tel:+918801488014" class="flex items-center gap-3 hover:text-white">
+                            <i class="fa-solid fa-phone"></i> +91 88014 88014
+                        </a>
+                        <a href="mailto:info@saanvitatechnologies.in" class="flex items-center gap-3 hover:text-white">
+                            <i class="fa-solid fa-envelope"></i> info@saanvitatechnologies.in
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-zinc-800 mt-16 pt-8 text-xs text-center text-zinc-500">
+                © 2026 Saanvitha Technologies. All Rights Reserved. | Made with ❤️ in Vijayawada
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/918801488014" target="_blank" 
+       class="fixed bottom-8 right-8 bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center text-4xl shadow-2xl hover:scale-110 z-50">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script>
+        function filterCategory(category) {
+            const cards = document.querySelectorAll('.project-card');
+            cards.forEach(card => {
+                if (category === 'all') {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = card.dataset.category === category ? 'block' : 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

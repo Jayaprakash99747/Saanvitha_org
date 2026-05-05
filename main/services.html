@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Saanvita Technologies</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        .service-card { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+        .service-card:hover { transform: translateY(-20px); }
+        .nav-link { transition: all 0.3s; }
+        .nav-link:hover { color: #ff3b5c; transform: translateY(-2px); }
+    </style>
+</head>
+<body class="font-sans bg-zinc-50">
+
+    <!-- NAVBAR -->
+    <nav class="bg-white border-b sticky top-0 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-12 h-12 bg-gradient-to-br from-red-500 to-yellow-400 rounded-2xl flex items-center justify-center text-white text-3xl font-bold">S</div>
+                <div>
+                    <span class="text-2xl font-bold tracking-tight text-red-600">SAANVITHA</span>
+                    <span class="text-2xl font-bold tracking-tight text-blue-600">TECHNOLOGIES</span>
+                </div>
+            </div>
+            
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="index.html" class="nav-link text-zinc-700 hover:text-red-600">Home</a>
+                <a href="services.html" class="nav-link text-zinc-700 hover:text-red-600">Services</a>
+                <a href="training.html" class="nav-link text-zinc-700 hover:text-red-600">Training</a>
+                <a href="portfolio.html" class="nav-link text-zinc-700 hover:text-red-600">Portfolio</a>
+                <a href="contact.html" class="nav-link text-zinc-700 hover:text-red-600">Contact</a>
+            </div>
+            
+            <div class="flex items-center gap-4">
+                <a href="tel:+918801488014" class="hidden sm:flex items-center gap-2 bg-zinc-900 text-white px-5 py-3 rounded-2xl text-sm font-semibold hover:bg-zinc-800">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>+91 88014 88014</span>
+                </a>
+                <button onclick="window.location.href='contact.html'" 
+                        class="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-2xl font-semibold transition-all">
+                    Get Quote
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="bg-gradient-to-br from-blue-900 to-indigo-900 text-white py-24">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h1 class="text-6xl font-bold mb-6">Our Services</h1>
+            <p class="text-2xl max-w-2xl mx-auto">Complete Digital Solutions to Grow Your Business in Vijayawada & Across India</p>
+        </div>
+    </header>
+
+    <!-- Services Grid -->
+    <section class="py-24">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+            <div class="service-card bg-white rounded-3xl p-10 shadow-xl border border-zinc-100">
+                <i class="fa-solid fa-magnifying-glass text-6xl text-blue-600 mb-6"></i>
+                <h3 class="text-3xl font-bold mb-4">SEO (Search Engine Optimization)</h3>
+                <p class="text-zinc-600">Get your website on the first page of Google. Local SEO, Technical SEO, Content Strategy.</p>
+                <ul class="mt-8 space-y-3 text-sm">
+                    <li>✅ Keyword Research & Analysis</li>
+                    <li>✅ On-Page & Off-Page SEO</li>
+                    <li>✅ Google My Business Optimization</li>
+                    <li>✅ Monthly Performance Reports</li>
+                </ul>
+            </div>
+
+            <div class="service-card bg-white rounded-3xl p-10 shadow-xl border border-zinc-100">
+                <i class="fa-solid fa-share-nodes text-6xl text-pink-600 mb-6"></i>
+                <h3 class="text-3xl font-bold mb-4">Social Media Marketing</h3>
+                <p class="text-zinc-600">Instagram, Facebook, YouTube, LinkedIn & WhatsApp Marketing that builds brand & generates leads.</p>
+            </div>
+
+            <div class="service-card bg-white rounded-3xl p-10 shadow-xl border border-zinc-100">
+                <i class="fa-solid fa-ad text-6xl text-orange-600 mb-6"></i>
+                <h3 class="text-3xl font-bold mb-4">Google Ads (PPC)</h3>
+                <p class="text-zinc-600">Targeted paid campaigns with maximum ROI. Search, Display, YouTube & Shopping Ads.</p>
+            </div>
+
+            <div class="service-card bg-white rounded-3xl p-10 shadow-xl border border-zinc-100">
+                <i class="fa-solid fa-laptop-code text-6xl text-emerald-600 mb-6"></i>
+                <h3 class="text-3xl font-bold mb-4">Website Development</h3>
+                <p class="text-zinc-600">Fast, responsive, SEO-friendly websites. Static, Dynamic, E-commerce & Custom Solutions.</p>
+            </div>
+
+            <div class="service-card bg-white rounded-3xl p-10 shadow-xl border border-zinc-100">
+                <i class="fa-solid fa-palette text-6xl text-purple-600 mb-6"></i>
+                <h3 class="text-3xl font-bold mb-4">Graphic Designing</h3>
+                <p class="text-zinc-600">Visiting Cards, Flex Banners, Brochures, Social Media Posts, Logos & Brand Identity.</p>
+            </div>
+
+            <div class="service-card bg-white rounded-3xl p-10 shadow-xl border border-zinc-100">
+                <i class="fa-solid fa-video text-6xl text-rose-600 mb-6"></i>
+                <h3 class="text-3xl font-bold mb-4">Video Editing & Reels</h3>
+                <p class="text-zinc-600">Professional promotional videos, YouTube editing & Instagram Reels.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Designing Services -->
+    <section class="bg-zinc-900 text-white py-20">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-5xl font-bold text-center mb-12">Designing Services</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white/10 backdrop-blur p-8 rounded-3xl">Visiting Cards, Pamphlets, Brochures</div>
+                <div class="bg-white/10 backdrop-blur p-8 rounded-3xl">Flex Banners, Wall Posters, Hoardings</div>
+                <div class="bg-white/10 backdrop-blur p-8 rounded-3xl">Invitation Cards, Book Work, Magazine</div>
+            </div>
+        </div>
+    </section>
+    <hr>
+     <!-- FOOTER -->
+    <footer class="bg-zinc-900 text-zinc-300">
+        <div class="max-w-7xl mx-auto px-6 pt-20 pb-12">
+            <div class="grid md:grid-cols-4 gap-10">
+                <div>
+                    <div class="flex items-center gap-3 text-white mb-6">
+                        <div class="w-10 h-10 bg-gradient-to-br from-red-500 to-yellow-400 rounded-2xl flex items-center justify-center text-3xl font-bold">S</div>
+                        <div class="font-bold text-xl">Saanvitha Technologies</div>
+                    </div>
+                    <p class="text-sm">Your complete digital growth partner in Vijayawada.</p>
+                    
+                    <div class="mt-8">
+                        <a href="https://wa.me/918801488014" target="_blank" 
+                           class="inline-flex items-center gap-3 bg-green-600 text-white px-6 py-3 rounded-2xl hover:bg-green-700">
+                            <i class="fa-brands fa-whatsapp text-2xl"></i>
+                            <span class="font-medium">Chat on WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-semibold mb-6">Services</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#" class="hover:text-white transition-colors">Digital Marketing</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">SEO & Google Ads</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Website Development</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Graphic Designing</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-semibold mb-6">Training</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#" class="hover:text-white transition-colors">SEO Training</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Digital Marketing Course</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Website Design</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-semibold mb-6">Contact</h4>
+                    <div class="space-y-4 text-sm">
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-location-dot mt-1"></i>
+                            <div>D No: 39-10-21, 3rd Floor,<br>Above Suraksha Pharmacy,<br>Veterinary Hospital Road, Labbipet,<br>Vijayawada - 520010, AP</div>
+                        </div>
+                        <a href="tel:+918801488014" class="flex items-center gap-3 hover:text-white">
+                            <i class="fa-solid fa-phone"></i> +91 88014 88014
+                        </a>
+                        <a href="mailto:info@saanvitatechnologies.in" class="flex items-center gap-3 hover:text-white">
+                            <i class="fa-solid fa-envelope"></i> info@saanvitatechnologies.in
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-zinc-800 mt-16 pt-8 text-xs text-center text-zinc-500">
+                © 2026 Saanvitha Technologies. All Rights Reserved. | Made with ❤️ in Vijayawada
+            </div>
+        </div>
+    </footer>
+    
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/918801488014" target="_blank" 
+       class="fixed bottom-8 right-8 bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center text-4xl shadow-2xl hover:scale-110 z-50">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+</body>
+</html>

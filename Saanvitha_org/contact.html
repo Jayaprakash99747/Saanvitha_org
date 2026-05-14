@@ -23,6 +23,14 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+    <!--workn hour logos-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+
+
+
     <link href="css/header.css" rel="stylesheet">
     <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/> -->
 
@@ -667,7 +675,110 @@ textarea.form-control {
 
     overflow: hidden;
 }
+
+
+
     </style>
+
+
+<style>
+    <style>
+
+.enquiry-form{
+    background:#fff;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 10px 35px rgba(0,0,0,0.1);
+    max-width:600px;
+    margin:auto;
+}
+
+.form-title{
+    font-size:32px;
+    font-weight:700;
+    color:#092a49;
+    margin-bottom:30px;
+    text-align:center;
+}
+
+.enquiry-form form{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.enquiry-form input,
+.enquiry-form select,
+.enquiry-form textarea{
+
+    width:100%;
+    padding:15px 18px;
+
+    border:1px solid #ddd;
+    border-radius:12px;
+
+    font-size:16px;
+
+    transition:0.3s ease;
+
+    outline:none;
+}
+
+.enquiry-form input:focus,
+.enquiry-form select:focus,
+.enquiry-form textarea:focus{
+
+    border-color:#092a49;
+
+    box-shadow:0 0 10px rgba(9,42,73,0.15);
+}
+
+.enquiry-form textarea{
+    min-height:140px;
+    resize:none;
+}
+
+.enquiry-form button{
+
+    background:linear-gradient(135deg,#092a49,#0f4c81);
+
+    color:#fff;
+
+    border:none;
+
+    padding:15px;
+
+    border-radius:12px;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:0.3s ease;
+}
+
+.enquiry-form button:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 10px 25px rgba(9,42,73,0.25);
+}
+
+@media(max-width:768px){
+
+    .enquiry-form{
+        padding:25px;
+    }
+
+    .form-title{
+        font-size:26px;
+    }
+}
+
+</style>
+</style>
 </head>
 
 <body class="page">
@@ -783,21 +894,17 @@ textarea.form-control {
                     <!-- Dropdown -->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-                            Training
+                            Careers
                         </a>
 
                         <ul class="dropdown-menu">
                             <li>
-                                <a class="dropdown-item" href="placement.html">
-                                    Placement
+                                <a class="dropdown-item" href="Training.html">
+                                    Training & Placement
                                 </a>
                             </li>
 
-                            <li>
-                                <a class="dropdown-item" href="career.html">
-                                    Career
-                                </a>
-                            </li>
+                            
                         </ul>
                     </li>
 
@@ -912,57 +1019,55 @@ textarea.form-control {
 
             <h2 class="form-title">Send Your Enquiry</h2>
 
-            <form>
+            <form action="contact.php" method="POST">
 
-                <div class="row">
-
-                    <div class="col-md-6 mb-4">
-                        <input type="text" class="form-control"
-                            placeholder="First Name *">
-                    </div>
-
-                    <div class="col-md-6 mb-4">
-                        <input type="text" class="form-control"
-                            placeholder="Last Name *">
-                    </div>
-
-                </div>
-
-                <div class="mb-4">
-                    <input type="email" class="form-control"
-                        placeholder="Email Address *">
-                </div>
-
-                <div class="mb-4">
-                    <input type="tel" class="form-control"
-                        placeholder="Phone Number *">
-                </div>
-
-                <div class="mb-4">
-
-                    <select class="form-control">
-                        <option>Select Service *</option>
-                        <option>SEO</option>
-                        <option>Social Media Marketing</option>
-                        <option>Google Ads</option>
-                        <option>Website Development</option>
-                        <option>Graphic Designing</option>
-                        <option>Flex & Print Design</option>
-                    </select>
-
-                </div>
-
-                <div class="mb-4">
-                    <textarea class="form-control" rows="5"
-                        placeholder="Tell us about your requirements..."></textarea>
-                </div>
-
-                <button class="form-submit">
-                    Send Message
-                </button>
-
+                <input type="text" name="first_name" placeholder="First Name" required>
+            
+                <input type="text" name="last_name" placeholder="Last Name" required>
+            
+                <input type="email" name="email" placeholder="Email" required>
+            
+                <input type="text" name="phone" placeholder="Phone" required>
+            
+                <select name="service" required>
+            
+                    <option value="">Select Service</option>
+            
+                    <option value="SEO">SEO</option>
+            
+                    <option value="Social Media Marketing">
+                        Social Media Marketing
+                    </option>
+            
+                    <option value="Google Ads">
+                        Google Ads
+                    </option>
+            
+                    <option value="Website Development">
+                        Website Development
+                    </option>
+            
+                    <option value="Graphic Designing">
+                        Graphic Designing
+                    </option>
+            
+                    <option value="Flex & Print Design">
+                        Flex & Print Design
+                    </option>
+            
+                </select>
+            
+                <textarea name="message" placeholder="Message" required></textarea>
+            
+                <button type="submit">Send Message</button>
+            
             </form>
+    
 
+           
+        
+            
+        
         </div>
 
     </div>
